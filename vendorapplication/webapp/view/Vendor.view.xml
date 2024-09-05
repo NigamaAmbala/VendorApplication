@@ -1,0 +1,180 @@
+<mvc:View
+    controllerName="com.app.vendorapplication.controller.Vendor"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        id="page"
+        title="Vendor Page"
+        class="page"
+    >
+        <VBox
+            id="Smartformvbox"
+            justifyContent="Center"
+            alignItems="Center"
+            class="SmartformVbox"
+        >
+            <f:SimpleForm
+                id="reservationForm"
+                layout="ResponsiveGridLayout"
+                editable="true"
+                columnsM="2"
+                columnsL="3"
+                columnsXL="4"
+                class="SimpleForm"
+            >
+                <Title
+                    text="RESERVATION"
+                    class="Reserveheading"
+                />
+                <VBox
+                    id="ReserveVbox"
+                    class="Vbox"
+                >
+                    <Label
+                        id="idVendorNameLabel"
+                        text="Vedor Name"
+                        class="Bold"
+                    />
+                    <Input
+                        id="InputVendorName"
+                        value="{reserveModel>/Reservations/Vendorphno}"
+                        placeholder="Enter Vedor Name"
+                    />
+                    <Label
+                        id="idVendorphnLabel"
+                        text="Vedor ph.no"
+                        class="Bold"
+                    />
+                    <Input
+                        id="InputVendorPhonenumber"
+                        value="{reserveModel>/Reservations/vedorName}"
+                        placeholder="Enter Vedor Name"
+                    />
+                    <Label
+                        id="idVehicleNumberLabel"
+                        text="Vehicle No"
+                        class="Bold"
+                    />
+                    <Input
+                        id="InputVehicleno"
+                        value="{reserveModel>/Reservations/vehicleNo}"
+                        placeholder="Enter Vehicle Number"
+                    />
+                    <Label
+                        id="idDriverNameLabel"
+                        text="Driver Name"
+                        class="Bold"
+                    />
+                    <Input
+                        id="InputDriverName"
+                        value="{reserveModel>/Reservations/driverName}"
+                        placeholder="Enter Driver Name"
+                    />
+                    <Label
+                        id="idphonenumberLabel"
+                        text="Phone Number"
+                        class="Bold"
+                    />
+                    <Input
+                        id="InputPhonenumber"
+                        value="{reserveModel>/Reservations/phoneNumber}"
+                        placeholder="Enter Phone number"
+                    />
+                    <Label
+                        id="idVehicletypeLabel"
+                        text="Vehicle Type"
+                        class="Bold"
+                    />
+                    <Input
+                        id="InputVehicletype"
+                        placeholder="Enter Vehicle Type"
+                        value="{reserveModel>/Reservations/vehicleType}"
+                    />
+                    <Label
+                        id="idProcesstypeLabel"
+                        text="Process Type"
+                        class="Bold"
+                    />
+                    <!-- <Input
+                        id="InputProcesstype"
+                        placeholder="Enter Vehicle Type"
+                        value="{reserveModel>/Reservations/Processtype}"
+                    /> -->
+                    <Select
+                                    id="idprocessselect"
+                                    class="classinputmptc"
+                                    width="100%"
+                                    change="onServiceTypeChangeR"
+                                >
+                                    <items>
+                                        <core:Item
+                                            id="iiskllss1"
+                                            text=""
+                                            key=""
+                                        />
+
+                                        <core:Item
+                                            id="idProcessTypeItems31"
+                                            text="INWARD"
+                                            key="INWARD"
+                                        />
+                                        <core:Item
+                                            id="idProcessTypeItems12"
+                                            text="OUTWARD"
+                                            key="OUTWARD"
+                                        />
+                                    </items>
+                                </Select>
+                    
+                    <!-- <Label
+                        id="idParkinglotLabel"
+                        text="Parking lot"
+                        class="Bold"
+                    />
+                    <ComboBox
+                        id="idparkingLotSelect"
+                        width="80%"
+                        placeholder="Please Select a Slot from Dropdown.. "
+                        class="SlotNumberBold"
+                        items="{path: '/ParkingslotsSet',
+                                        filters: [{path: 'Status', operator: 'EQ', value1: 'AVAILABLE'}]}"
+                    >
+                        <core:Item
+                            id="IDGenItem3"
+                            key="{Parkinglot}"
+                            text="{Parkinglot}"
+                        />
+                    </ComboBox> -->
+                    <Label
+                        id="idEstimatedtimeLabel"
+                        text="Estimated Time"
+                        class="Bold"
+                    />
+                    <DateTimePicker
+                        id="InputEstimatedtime"
+                        placeholder="Enter Time"
+                        value="{reserveModel>/Reservations/ReservedDate}"
+                    />
+                    <HBox
+                        id="_IDReserveHBox1"
+                        alignItems="Center"
+                        class="Hbox"
+                    >
+                        <Button
+                            id="idbuttonreserve"
+                            text="Request"
+                            press="onReservePressbtn"
+                            type="Success"
+                            class="Button"
+                        />
+                    </HBox>
+                </VBox>
+            </f:SimpleForm>
+        </VBox>
+    </Page>
+</mvc:View>

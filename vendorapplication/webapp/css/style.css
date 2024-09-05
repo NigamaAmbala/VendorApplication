@@ -1,0 +1,32 @@
+/* Enter your custom styles here */
+.SmartformVbox{
+    margin-top: 20px; 
+    margin-left: 200px;
+}
+.page{
+    background-color: antiquewhite;
+    background-image: url("https://thumbs.dreamstime.com/b/trucks-parked-warehouse-shopping-center-aerial-view-car-parking-trucks-parked-warehouse-shopping-center-aerial-view-273028725.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.Reserveheading{
+    /* margin-bottom: 20px; */
+    color: brown;
+  }
+
+  .Bold {
+    font-weight:bolder;
+    color:indigo;
+  }
+  .Button{
+    margin-left: 150px;
+  } 
+  /* .Hbox{
+    margin-top: 20px;
+  } */
+  /* .SimpleForm{
+    background-color:lavenderblush;
+  } */
